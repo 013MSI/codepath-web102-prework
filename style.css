@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+    font-family: system-ui, system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
+    sans-serif;
+    background: #1a2533;
+    color: #eaedf1;
+}
+
+.content {
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 #tentacles {
@@ -11,61 +21,109 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: #C0D4D8;
+    color: #1a2533;
     padding: 1%;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    justify-content: space-between;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: #1a2533;
+    background-color: #eaedf1;
+    padding: 7px 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.link:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #eaedf1;
 }
 
 .stats-container {
     display: flex;
     align-items: space-evenly;
+    color: #1a2533;
 }
 
 .stats-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 30px #C0D4D8;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
-    border-radius: 7px;
+    background-color: #eaedf1;
+    border-radius: 10px;
     padding: 1%;
     margin: 1%;
     width: 100%;
     text-align: center;
+    font-weight: bold;
 }
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
 }
 
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    margin-right: 1em;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+input {
+    width: 50%;
+    max-width: 500px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
 #games-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    color: #1a2533;
+    min-height: 500px;
 }
 
 .game-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 10px #1a2533;
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: #eaedf1;
     padding: 1%;
     margin: 1%;
     width: 300px;
     text-align: center;
-    border-radius: 7px;
+    border-radius: 10px;
 }
 
 .game-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 30px #C0D4D8;
 }
 
 #button-container {
@@ -73,9 +131,21 @@ body {
 }
 
 button {
-    font-family: 'Cabin';
     border: none;
-    padding: 1%;
-    margin: 1%;
-    border-radius: 7px;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 15px;
+    font-weight: bold;
+    background-color: #C0D4D8;
+    font-size: 1em;
+}
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #a8b0bc;
+}
+
+.clicked {
+   background-color: #eaedf1;
+   border: 3px solid #C0D4D8;
 }

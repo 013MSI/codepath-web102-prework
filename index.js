@@ -189,3 +189,43 @@ firstGameContainer.appendChild(firstGameElement);
 const secondGameElement = document.createElement('h2');
 secondGameElement.innerText = secondGame.name;
 secondGameContainer.appendChild(secondGameElement);
+
+
+/************************************************************************************
+ * Additional Features: Searching
+ */
+
+function search(input) {
+    deleteChildElements(gamesContainer);
+
+    const hasName = GAMES_JSON.filter( (game) => {
+        return game.name.toLowerCase().includes(input.toLowerCase());
+    });
+
+    // use the function we previously created to add unfunded games to the DOM
+    addGamesToPage(hasName);
+}
+
+const searchInput = document.getElementById("search");
+searchInput.addEventListener("input", e => search(e.target.value));
+
+/*
+* Additional Features: Button
+*/
+
+const unfundedButton = document.getElementById("unfunded-btn");
+const fundedButton = document.getElementById("funded-btn");
+const allButton = document.getElementById("all-btn");
+
+const buttons = [unfundedBtn, fundedBtn, allBtn];
+
+function removeClickedClass() {
+    buttons.forEach(button => button.classList.remove("clicked"));
+}
+
+buttons.forEach(button => {
+    button.addEventListener("click", function() {
+        removeClickedClass();
+        this.classList.add("clicked");
+    });
+});
