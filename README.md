@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 * [x] Develop a search function that enables users to locate games by matching substrings in
       their titles.
 * [x] Add a button highlight feature to clearly indicate the selected filter.
-* [x] Revise the color scheme and add padding to enhance accessibility and aesthetics by using [Coolors Color Contrast Checker](https://coolors.co/contrast-checker/eaedf1-1a2533).
+* [x] Update font, change color scheme, and add padding to enhance accessibility and aesthetics by using [Coolors Color Contrast Checker](https://coolors.co/contrast-checker/eaedf1-1a2533).
 
 ## Video Walkthrough
 
